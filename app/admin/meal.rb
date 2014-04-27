@@ -13,7 +13,5 @@ ActiveAdmin.register Meal do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  belongs_to :cook
-  navigation_menu :cook
   permit_params :name, :description, :price, :available_time
 end
