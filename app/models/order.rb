@@ -6,4 +6,8 @@ class Order < ActiveRecord::Base
   validates :status, :address, presence: true
   validates :status, inclusion: { in: STATUS_TYPE ,
     message: "%{value} is not a valid status" }
+    
+  def to_s
+    return id.to_s
+  end
 end
