@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427182112) do
+ActiveRecord::Schema.define(version: 20140427191831) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -60,9 +60,11 @@ ActiveRecord::Schema.define(version: 20140427182112) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "cook_id"
+    t.integer  "order_id"
   end
 
   add_index "meals", ["cook_id"], name: "index_meals_on_cook_id"
+  add_index "meals", ["order_id"], name: "index_meals_on_order_id"
 
   create_table "orders", force: true do |t|
     t.string   "status"
