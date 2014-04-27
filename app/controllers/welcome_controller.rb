@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @cooks = Cook.all
+    @meals = Meal.all
   end
 end
