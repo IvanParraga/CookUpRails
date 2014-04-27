@@ -13,5 +13,5 @@ ActiveAdmin.register Meal do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  permit_params :name, :description, :price, :available_time
+  permit_params :name, :description, :price, :available_time, :cook_id
 end
