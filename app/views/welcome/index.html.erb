@@ -1,5 +1,178 @@
-<h1>Hello, CookUp!</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
 
-<% @cooks.each do |cook| %>
-	Name: <%= cook.name %><br/>
-<% end %>
+<!-- Basic Page Needs
+  ================================================== -->
+<meta charset="utf-8">
+<title>[COOKUP]</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+  ================================================== -->
+<link rel="stylesheet" href="stylesheets/base.css">
+<link rel="stylesheet" href="stylesheets/skeleton.css">
+<link rel="stylesheet" href="stylesheets/layout.css">
+
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<!-- Favicons
+	================================================== -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="images/apple-touch-icon-114x114.png">
+<link
+	href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic'
+	rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+
+		<div class="eight columns" id="logo">
+			<img src="images/logo.png" alt="logo" width="60%">
+		</div>
+
+		<div id="nav" class="eight columns">
+			<ul>
+				<li><a href="index.html">Login</a></li>
+				<li><a href="about.html">Cook</a></li>
+				<li><a href="boutique.html">Order</a></li>
+				<li><a href="corporate.html">Language</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- <div id="headerImage" class="container-100">
+		<div id="welcome" class="container">
+			<div id="search" class="sixteen columns">
+				<h4>Description Cook</h4>
+				<p>Some short introduction</p>
+			</div>
+		</div>
+		
+		<div class="container">
+			@helper.form(action = routes.Application.find()) {
+			<div class="one-third column">
+ 				 <div class="four columns">
+					<label for="selectList">Neighbourhood</label> <select
+						id="selectLocation" name="locationId">
+						@for(location <- locations) {
+						<option value="@location.getId()">@location.getName()</option>
+						}
+					</select>
+				</div>
+				<div class="four columns">
+					<label for="selectList">Type of Dish</label> <select
+						id="selectMeal" name="mealId">
+						@for(meal <- meals) {
+						<option value="@meal.getId()">@meal.getName()</option>
+						}
+					</select>
+				</div>
+
+				<div class="four columns">
+					<button type="submit">Submit Form</button>
+				</div>
+			}
+			@helper.form(action = routes.Application.index()) {
+			<div class="four columns">
+					<button type="submit">Random Dishes</button>
+				</div>
+			}
+			</div>
+		</div>
+		
+	</div> -->
+
+
+
+
+	<div class="container">
+		<div id="order-option" class="sixteen columns">
+			<a href="#">ORDER ?</a> I <a href="#">COOK ?</a>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<% @meals.each do |meal| %>
+		<div id="dish" class="four columns">
+			<img src="" alt="<%= meal.name %>" width="300"
+				height="300">
+			<h5><%= meal.name %></h5>
+			<p><%= "bla bla" %></p>
+		</div>
+		<% end %>
+
+	<div class="container">
+		<div id="feature" class="eight columns">
+			<img src="images/fast.jpg" alt="fast" width="220" height="113">
+			<h5>FEATURE 1</h5>
+			<p>Name cook</p>
+		</div>
+		<div id="feature" class="eight columns">
+			<img src="images/foundation.jpg" alt="foundation" width="220"
+				height="113">
+			<h5>FEATURE 2</h5>
+			<p>Name cook</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 1</h5>
+			<p>Explanation</p>
+		</div>
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 2</h5>
+			<p>Explanation</p>
+		</div>
+		<div id="steps" class="one-third column">
+			<img src="#"></img>
+			<h5>STEP 3</h5>
+			<p>Explanation</p>
+		</div>
+	</div>
+
+	<div id="map" class="container-100">
+		<div class="sixteen columns">
+			<label for="regularInput">Regular Input</label> <input type="text"
+				id="regularInput" />
+		</div>
+	</div>
+
+
+	</div>
+
+
+
+	<!-- End Document
+================================================== -->
+</body>
+</html>
