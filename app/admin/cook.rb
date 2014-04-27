@@ -14,4 +14,10 @@ ActiveAdmin.register Cook do
   #  permitted
   # end
   permit_params :name
+  
+  sidebar "Cook Details", only: [:show, :edit] do
+    ul do
+      li link_to("Meals", admin_cook_meals_path(cook))
+    end
+  end
 end
