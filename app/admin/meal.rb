@@ -8,7 +8,7 @@ ActiveAdmin.register Meal do
       f.input :name
       f.input :description
       f.input :price
-      f.input :available_time
+      f.input :available_time, :as => :datetime_picker
       f.input :picture, :as => :file, :hint => f.template.image_tag(f.object.picture.url)
     end
     f.actions
