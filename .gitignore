@@ -17,3 +17,5 @@
 .project
 /lib
 /log
+.idea
+public/uploads
