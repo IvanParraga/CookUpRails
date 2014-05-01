@@ -136,65 +136,27 @@
 <!-- FEATURED BOXES SECTION -->
 <div id="featured-box" class="skt-section">
 	<div class="container">
-		<div class="mid-box-mid row-fluid"> 
-			<!-- Featured Box 1 -->
-			<div class="mid-box span4 fade_in_hide element_fade_in skt_start_animation">
-				<div class="skt-iconbox iconbox-top">		
-					<div class="iconbox-icon skt-animated small-to-large skt-viewport">	
-													<a class="skt-featured-images" href="http://designomadic.net/cook/#" title="Calabacín relleno con cous-cous">
-									<span class="skt-featured-image-mask"></span>
-									<img class="skin-bg" src="img/menu-val-1-courgette1.jpg" alt="boximg">	  
-							</a>
-											</div>		
-					<div class="iconbox-content">		
-						<h4>Calabacín relleno con cous-cous</h4>			
-						<p>Calabacines rellenos deliciosos con cous-cous, picadas, dátiles y nueces servida con una salsa de yogur fresco.
-<br>
-Price €
-</p>		
-					</div>			
-					<div class="clearfix"></div>	
-				</div>
-			</div>
-			<!-- Featured Box 2 -->
-			<div class="mid-box span4 fade_in_hide element_fade_in skt_start_animation">
-				<div class="skt-iconbox iconbox-top">
-					<div class="iconbox-icon skt-animated small-to-large skt-viewport">	
-					  						<a class="skt-featured-images" href="http://designomadic.net/cook/#" title="Ensalada de pollo y hierbas azafrán">
-								<span class="skt-featured-image-mask"></span>
-								<img class="skin-bg" src="img/menu-val-2-chicken-saffron1.jpg" alt="boximg">
-						</a>
-					  	
-					</div>		
-					<div class="iconbox-content">		
-						<h4>Ensalada de pollo y hierbas azafrán</h4>				
-						<p> Products with the ultimate features and functionality that provide the complete satisfaction to the clients.
-
-Price €</p>			
-					</div>			
-					<div class="clearfix"></div>	
-				</div>
-			</div>
-			<!-- Featured Box 3 -->
-			<div class="mid-box span4 fade_in_hide element_fade_in skt_start_animation">
-				<div class="skt-iconbox iconbox-top">		
-					<div class="iconbox-icon skt-animated small-to-large skt-viewport">
-					  			
-						<a class="skt-featured-images" href="http://designomadic.net/cook/#" title="Espaguetis limón y aceite de oliva">				
-								<span class="skt-featured-image-mask"></span>
-								<img class="skin-bg" src="img/menu-val-3-pasta-lemon.jpg" alt="boximg">
-						</a>
-					  	
-					</div>			
-					<div class="iconbox-content">			
-						<h4>Espaguetis limón y aceite de oliva</h4>				
-						<p>One of the easiest pasta dishes you'll ever make, all you have to do is boil the water for the pasta. This makes a great light meal or a great side dish to any meat or fish dish.
-
-Price €</p>		
-					</div>		
-					<div class="clearfix"></div>	
-				</div>
-			</div>
+		<div class="mid-box-mid row-fluid">
+            <% @meals.each do |meal| %>
+              <div class="mid-box span4 fade_in_hide element_fade_in skt_start_animation">
+                <div class="skt-iconbox iconbox-top">
+                  <div class="iconbox-icon skt-animated small-to-large skt-viewport">
+                    <a class="skt-featured-images" href="http://designomadic.net/cook/#" title="Calabacín relleno con cous-cous">
+                      <span class="skt-featured-image-mask"></span>
+                      <img class="skin-bg" src="<%= meal.picture %>" alt="<%= meal.name %>">
+                    </a>
+                  </div>
+                  <div class="iconbox-content">
+                    <h4><%= meal.name %></h4>
+                    <p>
+                      <%= meal.description %><br>
+                      <%= meal.price %> €
+                    </p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            <% end %>
 			<div class="clearfix"></div>
 		</div>
 	</div>
