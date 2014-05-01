@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 
 gem 'carrierwave'
 
+gem 'rmagick', :require => false
+
 # Gemfile in Rails >= 3.1
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
